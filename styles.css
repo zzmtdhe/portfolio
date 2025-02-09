@@ -31,10 +31,11 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-size: 14px;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #0071e3;
+    color: #00d1b2; /* 荧光色 */
 }
 
 /* 首页 (Hero section) */
@@ -55,6 +56,13 @@ nav a:hover {
 .hero h2 {
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.hero h2 .highlight {
+    color: #00d1b2; /* 荧光色 */
+    text-shadow: 0 0 10px #00d1b2, 0 0 20px #00d1b2, 0 0 30px #00d1b2; /* 荧光效果 */
 }
 
 .hero p {
@@ -63,16 +71,17 @@ nav a:hover {
 }
 
 .btn {
-    background-color: #0071e3;
+    background-color: #00d1b2; /* 荧光绿色 */
     color: white;
     padding: 12px 25px;
     font-size: 16px;
     text-decoration: none;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #005bb5;
+    background-color: #00b395; /* 荧光绿色的变色 */
 }
 
 /* 作品页面 */
@@ -91,18 +100,33 @@ nav a:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 45%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .project-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
 }
 
 .project-item h3 {
     margin-top: 15px;
     font-size: 22px;
     color: #333;
+}
+
+.project-item h3 .highlight {
+    color: #00d1b2; /* 荧光色 */
 }
 
 .project-item p {
@@ -123,7 +147,7 @@ nav a:hover {
     line-height: 1.6;
 }
 
-/* 移动端适配 */
+/* 响应式设计 */
 @media (max-width: 768px) {
     header {
         padding: 20px 5%;
@@ -145,17 +169,4 @@ nav a:hover {
     .about {
         padding: 40px 5%;
     }
-}
-
-/* 按钮和图片的过渡效果 */
-.btn {
-    transition: background-color 0.3s ease;
-}
-
-.project-item img {
-    transition: transform 0.3s ease;
-}
-
-.project-item img:hover {
-    transform: scale(1.05);
 }
